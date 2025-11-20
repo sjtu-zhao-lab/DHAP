@@ -1,0 +1,9 @@
+[submodule "deps/cuCollections"]
+	path = deps/cuCollections
+	url = https://github.com/bingps/cuCollections.git
+[submodule "deps/cxxopts"]
+	path = deps/cxxopts
+	url = https://github.com/jarro2783/cxxopts.git
+[submodule "deps/llvm-project"]
+	path = deps/llvm-project
+	url = https://github.com/bingps/llvm-project.git
