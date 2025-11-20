@@ -1,0 +1,307 @@
+{
+	"tables": {
+		"builda": {
+			"columns": [
+				{
+					"name": "b0_key",
+					"type": {
+						"base": "int",
+						"nullable": false,
+						"props": [
+							32
+						]
+					}
+				},
+				{
+					"distinct_values": 10,
+					"name": "b0_flt",
+					"type": {
+						"base": "int",
+						"nullable": false,
+						"props": [
+							32
+						]
+					}
+				},
+				{
+					"name": "b0_pld0",
+					"type": {
+						"base": "int",
+						"nullable": false,
+						"props": [
+							32
+						]
+					}
+				},
+				{
+					"name": "b0_pld1",
+					"type": {
+						"base": "int",
+						"nullable": false,
+						"props": [
+							32
+						]
+					}
+				}
+			],
+			"num_rows": 6000,
+			"pkey": [
+				"b0_key"
+			]
+		},
+		"builde": {
+			"columns": [
+				{
+					"name": "b4_key",
+					"type": {
+						"base": "int",
+						"nullable": false,
+						"props": [
+							32
+						]
+					}
+				},
+				{
+					"distinct_values": 10,
+					"name": "b4_flt",
+					"type": {
+						"base": "int",
+						"nullable": false,
+						"props": [
+							32
+						]
+					}
+				},
+				{
+					"name": "b4_pld0",
+					"type": {
+						"base": "int",
+						"nullable": false,
+						"props": [
+							32
+						]
+					}
+				},
+				{
+					"name": "b4_pld1",
+					"type": {
+						"base": "int",
+						"nullable": false,
+						"props": [
+							32
+						]
+					}
+				}
+			],
+			"num_rows": 6000,
+			"pkey": [
+				"b4_key"
+			]
+		},
+		"buildc": {
+			"columns": [
+				{
+					"name": "b2_key",
+					"type": {
+						"base": "int",
+						"nullable": false,
+						"props": [
+							32
+						]
+					}
+				},
+				{
+					"distinct_values": 10,
+					"name": "b2_flt",
+					"type": {
+						"base": "int",
+						"nullable": false,
+						"props": [
+							32
+						]
+					}
+				},
+				{
+					"name": "b2_pld0",
+					"type": {
+						"base": "int",
+						"nullable": false,
+						"props": [
+							32
+						]
+					}
+				},
+				{
+					"name": "b2_pld1",
+					"type": {
+						"base": "int",
+						"nullable": false,
+						"props": [
+							32
+						]
+					}
+				}
+			],
+			"num_rows": 6000,
+			"pkey": [
+				"b2_key"
+			]
+		},
+		"probe": {
+			"columns": [
+				{
+					"name": "p_key0",
+					"type": {
+						"base": "int",
+						"nullable": false,
+						"props": [
+							32
+						]
+					}
+				},
+				{
+					"name": "p_key1",
+					"type": {
+						"base": "int",
+						"nullable": false,
+						"props": [
+							32
+						]
+					}
+				},
+				{
+					"name": "p_key2",
+					"type": {
+						"base": "int",
+						"nullable": false,
+						"props": [
+							32
+						]
+					}
+				},
+				{
+					"name": "p_key3",
+					"type": {
+						"base": "int",
+						"nullable": false,
+						"props": [
+							32
+						]
+					}
+				},
+				{
+					"name": "p_pld0",
+					"type": {
+						"base": "int",
+						"nullable": false,
+						"props": [
+							32
+						]
+					}
+				}
+			],
+			"num_rows": 24000,
+			"pkey": [
+				"p_pld0"
+			]
+		},
+		"buildb": {
+			"columns": [
+				{
+					"name": "b1_key",
+					"type": {
+						"base": "int",
+						"nullable": false,
+						"props": [
+							32
+						]
+					}
+				},
+				{
+					"distinct_values": 10,
+					"name": "b1_flt",
+					"type": {
+						"base": "int",
+						"nullable": false,
+						"props": [
+							32
+						]
+					}
+				},
+				{
+					"name": "b1_pld0",
+					"type": {
+						"base": "int",
+						"nullable": false,
+						"props": [
+							32
+						]
+					}
+				},
+				{
+					"name": "b1_pld1",
+					"type": {
+						"base": "int",
+						"nullable": false,
+						"props": [
+							32
+						]
+					}
+				}
+			],
+			"num_rows": 6000,
+			"pkey": [
+				"b1_key"
+			]
+		},
+		"buildd": {
+			"columns": [
+				{
+					"name": "b3_key",
+					"type": {
+						"base": "int",
+						"nullable": false,
+						"props": [
+							32
+						]
+					}
+				},
+				{
+					"distinct_values": 10,
+					"name": "b3_flt",
+					"type": {
+						"base": "int",
+						"nullable": false,
+						"props": [
+							32
+						]
+					}
+				},
+				{
+					"name": "b3_pld0",
+					"type": {
+						"base": "int",
+						"nullable": false,
+						"props": [
+							32
+						]
+					}
+				},
+				{
+					"name": "b3_pld1",
+					"type": {
+						"base": "int",
+						"nullable": false,
+						"props": [
+							32
+						]
+					}
+				}
+			],
+			"num_rows": 6000,
+			"pkey": [
+				"b3_key"
+			]
+		}
+	}
+}

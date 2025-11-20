@@ -1,0 +1,5 @@
+# add_subdirectory(python)
+add_subdirectory(mlir-tools)
+# add_subdirectory(sourcemap)
+# add_subdirectory(sql)
+# add_subdirectory(sqlite-tester)

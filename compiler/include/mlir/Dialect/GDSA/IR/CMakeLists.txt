@@ -1,0 +1,17 @@
+
+set(LLVM_TARGET_DEFINITIONS GDSAOps.td)
+mlir_tablegen(GDSAOpsDialect.h.inc -gen-dialect-decls)
+mlir_tablegen(GDSAOpsDialect.cpp.inc -gen-dialect-defs)
+mlir_tablegen(GDSAOps.h.inc -gen-op-decls)
+mlir_tablegen(GDSAOps.cpp.inc -gen-op-defs)
+mlir_tablegen(GDSAOpsEnums.h.inc -gen-enum-decls)
+mlir_tablegen(GDSAOpsEnums.cpp.inc -gen-enum-defs)
+mlir_tablegen(GDSAOpsTypes.h.inc --gen-typedef-decls)
+mlir_tablegen(GDSAOpsTypes.cpp.inc --gen-typedef-defs)
+
+set(LLVM_TARGET_DEFINITIONS GDSAInterfaces.td)
+mlir_tablegen(GDSAOpsInterfaces.h.inc -gen-op-interface-decls)
+mlir_tablegen(GDSAOpsInterfaces.cpp.inc -gen-op-interface-defs)
+add_public_tablegen_target(MLIRGDSAOpsIncGen)
+# add_mlir_doc(GDSAOps GDSADialect GDSA/ -gen-dialect-doc)
+# add_mlir_doc(DBInterfaces DBInterfaces DB/ -gen-op-interface-docs)

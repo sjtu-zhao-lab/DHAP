@@ -1,0 +1,5043 @@
+{
+    "tables": {
+        "time_dim": {
+            "columns": [
+                {
+                    "distinct_values": 86400,
+                    "name": "t_time_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 86400,
+                    "name": "t_time_id",
+                    "type": {
+                        "base": "string",
+                        "nullable": false,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 86400,
+                    "name": "t_time",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 24,
+                    "name": "t_hour",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 60,
+                    "name": "t_minute",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 60,
+                    "name": "t_second",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 2,
+                    "name": "t_am_pm",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 3,
+                    "name": "t_shift",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 4,
+                    "name": "t_sub_shift",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 3,
+                    "name": "t_meal_time",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                }
+            ],
+            "indices": [
+                {
+                    "columns": [
+                        "t_time_sk"
+                    ],
+                    "name": "pk_hash",
+                    "type": 0
+                }
+            ],
+            "num_rows": 86400,
+            "pkey": [
+                "t_time_sk"
+            ]
+        },
+        "catalog_page": {
+            "columns": [
+                {
+                    "distinct_values": 11718,
+                    "name": "cp_catalog_page_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 11718,
+                    "name": "cp_catalog_page_id",
+                    "type": {
+                        "base": "string",
+                        "nullable": false,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 91,
+                    "name": "cp_start_date_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 97,
+                    "name": "cp_end_date_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "cp_department",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            50
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 109,
+                    "name": "cp_catalog_number",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 108,
+                    "name": "cp_catalog_page_number",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 11609,
+                    "name": "cp_description",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            100
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 3,
+                    "name": "cp_type",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            100
+                        ]
+                    }
+                }
+            ],
+            "indices": [
+                {
+                    "columns": [
+                        "cp_catalog_page_sk"
+                    ],
+                    "name": "pk_hash",
+                    "type": 0
+                }
+            ],
+            "num_rows": 11718,
+            "pkey": [
+                "cp_catalog_page_sk"
+            ]
+        },
+        "web_sales": {
+            "columns": [
+                {
+                    "distinct_values": 1823,
+                    "name": "ws_sold_date_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 41020,
+                    "name": "ws_sold_time_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1946,
+                    "name": "ws_ship_date_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 18000,
+                    "name": "ws_item_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 45161,
+                    "name": "ws_bill_customer_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 59093,
+                    "name": "ws_bill_cdemo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 7197,
+                    "name": "ws_bill_hdemo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 34971,
+                    "name": "ws_bill_addr_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 45196,
+                    "name": "ws_ship_customer_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 59070,
+                    "name": "ws_ship_cdemo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 7197,
+                    "name": "ws_ship_hdemo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 34998,
+                    "name": "ws_ship_addr_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 60,
+                    "name": "ws_web_page_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 30,
+                    "name": "ws_web_site_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 20,
+                    "name": "ws_ship_mode_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 5,
+                    "name": "ws_warehouse_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 300,
+                    "name": "ws_promo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 60000,
+                    "name": "ws_order_number",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 100,
+                    "name": "ws_quantity",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 9901,
+                    "name": "ws_wholesale_cost",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 29070,
+                    "name": "ws_list_price",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 24620,
+                    "name": "ws_sales_price",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 282972,
+                    "name": "ws_ext_discount_amt",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 282572,
+                    "name": "ws_ext_sales_price",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 273010,
+                    "name": "ws_ext_wholesale_cost",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 388373,
+                    "name": "ws_ext_list_price",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 68432,
+                    "name": "ws_ext_tax",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 96930,
+                    "name": "ws_coupon_amt",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 197833,
+                    "name": "ws_ext_ship_cost",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 297990,
+                    "name": "ws_net_paid",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 366296,
+                    "name": "ws_net_paid_inc_tax",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 372292,
+                    "name": "ws_net_paid_inc_ship",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 460686,
+                    "name": "ws_net_paid_inc_ship_tax",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 337469,
+                    "name": "ws_net_profit",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                }
+            ],
+            "indices": [
+                {
+                    "columns": [
+                        "ws_item_sk",
+                        "ws_order_number"
+                    ],
+                    "name": "pk_hash",
+                    "type": 0
+                }
+            ],
+            "num_rows": 719384,
+            "pkey": [
+                "ws_item_sk",
+                "ws_order_number"
+            ]
+        },
+        "household_demographics": {
+            "columns": [
+                {
+                    "distinct_values": 7200,
+                    "name": "hd_demo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 20,
+                    "name": "hd_income_band_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 6,
+                    "name": "hd_buy_potential",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 10,
+                    "name": "hd_dep_count",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 6,
+                    "name": "hd_vehicle_count",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                }
+            ],
+            "indices": [
+                {
+                    "columns": [
+                        "hd_demo_sk"
+                    ],
+                    "name": "pk_hash",
+                    "type": 0
+                }
+            ],
+            "num_rows": 7200,
+            "pkey": [
+                "hd_demo_sk"
+            ]
+        },
+        "catalog_returns": {
+            "columns": [
+                {
+                    "distinct_values": 2060,
+                    "name": "cr_returned_date_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 65102,
+                    "name": "cr_returned_time_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 17862,
+                    "name": "cr_item_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 60608,
+                    "name": "cr_refunded_customer_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 91032,
+                    "name": "cr_refunded_cdemo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 7200,
+                    "name": "cr_refunded_hdemo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 42233,
+                    "name": "cr_refunded_addr_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 75405,
+                    "name": "cr_returning_customer_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 135452,
+                    "name": "cr_returning_cdemo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 7200,
+                    "name": "cr_returning_hdemo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 47012,
+                    "name": "cr_returning_addr_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 6,
+                    "name": "cr_call_center_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 6536,
+                    "name": "cr_catalog_page_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 20,
+                    "name": "cr_ship_mode_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 5,
+                    "name": "cr_warehouse_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 35,
+                    "name": "cr_reason_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 94519,
+                    "name": "cr_order_number",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 100,
+                    "name": "cr_return_quantity",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 82918,
+                    "name": "cr_return_amount",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 25923,
+                    "name": "cr_return_tax",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 96833,
+                    "name": "cr_return_amt_inc_tax",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 9951,
+                    "name": "cr_fee",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 64432,
+                    "name": "cr_return_ship_cost",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 74284,
+                    "name": "cr_refunded_cash",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 55024,
+                    "name": "cr_reversed_charge",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 54547,
+                    "name": "cr_store_credit",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 86883,
+                    "name": "cr_net_loss",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                }
+            ],
+            "indices": [
+                {
+                    "columns": [
+                        "cr_item_sk",
+                        "cr_order_number"
+                    ],
+                    "name": "pk_hash",
+                    "type": 0
+                }
+            ],
+            "num_rows": 144067,
+            "pkey": [
+                "cr_item_sk",
+                "cr_order_number"
+            ]
+        },
+        "web_site": {
+            "columns": [
+                {
+                    "distinct_values": 30,
+                    "name": "web_site_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 15,
+                    "name": "web_site_id",
+                    "type": {
+                        "base": "string",
+                        "nullable": false,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 4,
+                    "name": "web_rec_start_date",
+                    "type": {
+                        "base": "date",
+                        "nullable": true,
+                        "props": [
+                            "day"
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 3,
+                    "name": "web_rec_end_date",
+                    "type": {
+                        "base": "date",
+                        "nullable": true,
+                        "props": [
+                            "day"
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 5,
+                    "name": "web_name",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            50
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 15,
+                    "name": "web_open_date_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 10,
+                    "name": "web_close_date_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "web_class",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            50
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 22,
+                    "name": "web_manager",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            40
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 6,
+                    "name": "web_mkt_id",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 22,
+                    "name": "web_mkt_class",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            50
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 18,
+                    "name": "web_mkt_desc",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            100
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 25,
+                    "name": "web_market_manager",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            40
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 6,
+                    "name": "web_company_id",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 6,
+                    "name": "web_company_name",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 18,
+                    "name": "web_street_number",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 30,
+                    "name": "web_street_name",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            60
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 15,
+                    "name": "web_street_type",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 23,
+                    "name": "web_suite_number",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 2,
+                    "name": "web_city",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            60
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "web_county",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            30
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "web_state",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 2,
+                    "name": "web_zip",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "web_country",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            20
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "web_gmt_offset",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            5,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 10,
+                    "name": "web_tax_percentage",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            5,
+                            2
+                        ]
+                    }
+                }
+            ],
+            "indices": [
+                {
+                    "columns": [
+                        "web_site_sk"
+                    ],
+                    "name": "pk_hash",
+                    "type": 0
+                }
+            ],
+            "num_rows": 30,
+            "pkey": [
+                "web_site_sk"
+            ]
+        },
+        "customer_address": {
+            "columns": [
+                {
+                    "distinct_values": 50000,
+                    "name": "ca_address_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 50000,
+                    "name": "ca_address_id",
+                    "type": {
+                        "base": "string",
+                        "nullable": false,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 1000,
+                    "name": "ca_street_number",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 6901,
+                    "name": "ca_street_name",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            60
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 20,
+                    "name": "ca_street_type",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 75,
+                    "name": "ca_suite_number",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 695,
+                    "name": "ca_city",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            60
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1846,
+                    "name": "ca_county",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            30
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 51,
+                    "name": "ca_state",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 3692,
+                    "name": "ca_zip",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "ca_country",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            20
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 6,
+                    "name": "ca_gmt_offset",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            5,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 3,
+                    "name": "ca_location_type",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                }
+            ],
+            "indices": [
+                {
+                    "columns": [
+                        "ca_address_sk"
+                    ],
+                    "name": "pk_hash",
+                    "type": 0
+                }
+            ],
+            "num_rows": 50000,
+            "pkey": [
+                "ca_address_sk"
+            ]
+        },
+        "date_dim": {
+            "columns": [
+                {
+                    "distinct_values": 73049,
+                    "name": "d_date_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 73049,
+                    "name": "d_date_id",
+                    "type": {
+                        "base": "string",
+                        "nullable": false,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 73049,
+                    "name": "d_date",
+                    "type": {
+                        "base": "date",
+                        "nullable": true,
+                        "props": [
+                            "day"
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 2401,
+                    "name": "d_month_seq",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 10436,
+                    "name": "d_week_seq",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 801,
+                    "name": "d_quarter_seq",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 201,
+                    "name": "d_year",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 7,
+                    "name": "d_dow",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 12,
+                    "name": "d_moy",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 31,
+                    "name": "d_dom",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 4,
+                    "name": "d_qoy",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 201,
+                    "name": "d_fy_year",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 801,
+                    "name": "d_fy_quarter_seq",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 10436,
+                    "name": "d_fy_week_seq",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 7,
+                    "name": "d_day_name",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 801,
+                    "name": "d_quarter_name",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            6
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 2,
+                    "name": "d_holiday",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            1
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 2,
+                    "name": "d_weekend",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            1
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 2,
+                    "name": "d_following_holiday",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            1
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 2401,
+                    "name": "d_first_dom",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 2401,
+                    "name": "d_last_dom",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 73000,
+                    "name": "d_same_day_ly",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 72698,
+                    "name": "d_same_day_lq",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "d_current_day",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            1
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "d_current_week",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            1
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 2,
+                    "name": "d_current_month",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            1
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 2,
+                    "name": "d_current_quarter",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            1
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 2,
+                    "name": "d_current_year",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            1
+                        ]
+                    }
+                }
+            ],
+            "indices": [
+                {
+                    "columns": [
+                        "d_date_sk"
+                    ],
+                    "name": "pk_hash",
+                    "type": 0
+                }
+            ],
+            "num_rows": 73049,
+            "pkey": [
+                "d_date_sk"
+            ]
+        },
+        "ship_mode": {
+            "columns": [
+                {
+                    "distinct_values": 20,
+                    "name": "sm_ship_mode_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 20,
+                    "name": "sm_ship_mode_id",
+                    "type": {
+                        "base": "string",
+                        "nullable": false,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 6,
+                    "name": "sm_type",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 4,
+                    "name": "sm_code",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 20,
+                    "name": "sm_carrier",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 20,
+                    "name": "sm_contract",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                }
+            ],
+            "indices": [
+                {
+                    "columns": [
+                        "sm_ship_mode_sk"
+                    ],
+                    "name": "pk_hash",
+                    "type": 0
+                }
+            ],
+            "num_rows": 20,
+            "pkey": [
+                "sm_ship_mode_sk"
+            ]
+        },
+        "call_center": {
+            "columns": [
+                {
+                    "distinct_values": 6,
+                    "name": "cc_call_center_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 3,
+                    "name": "cc_call_center_id",
+                    "type": {
+                        "base": "string",
+                        "nullable": false,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 4,
+                    "name": "cc_rec_start_date",
+                    "type": {
+                        "base": "date",
+                        "nullable": true,
+                        "props": [
+                            "day"
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 3,
+                    "name": "cc_rec_end_date",
+                    "type": {
+                        "base": "date",
+                        "nullable": true,
+                        "props": [
+                            "day"
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 0,
+                    "name": "cc_closed_date_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 3,
+                    "name": "cc_open_date_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 3,
+                    "name": "cc_name",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            50
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 3,
+                    "name": "cc_class",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            50
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 5,
+                    "name": "cc_employees",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 6,
+                    "name": "cc_sq_ft",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 2,
+                    "name": "cc_hours",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 4,
+                    "name": "cc_manager",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            40
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 3,
+                    "name": "cc_mkt_id",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 5,
+                    "name": "cc_mkt_class",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 4,
+                    "name": "cc_mkt_desc",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            100
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 4,
+                    "name": "cc_market_manager",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            40
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 4,
+                    "name": "cc_division",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 4,
+                    "name": "cc_division_name",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            50
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 4,
+                    "name": "cc_company",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 4,
+                    "name": "cc_company_name",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 3,
+                    "name": "cc_street_number",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 3,
+                    "name": "cc_street_name",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            60
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 3,
+                    "name": "cc_street_type",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 3,
+                    "name": "cc_suite_number",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "cc_city",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            60
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "cc_county",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            30
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "cc_state",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "cc_zip",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "cc_country",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            20
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "cc_gmt_offset",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            5,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 4,
+                    "name": "cc_tax_percentage",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            5,
+                            2
+                        ]
+                    }
+                }
+            ],
+            "indices": [
+                {
+                    "columns": [
+                        "cc_call_center_sk"
+                    ],
+                    "name": "pk_hash",
+                    "type": 0
+                }
+            ],
+            "num_rows": 6,
+            "pkey": [
+                "cc_call_center_sk"
+            ]
+        },
+        "store_sales": {
+            "columns": [
+                {
+                    "distinct_values": 1823,
+                    "name": "ss_sold_date_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 45647,
+                    "name": "ss_sold_time_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 18000,
+                    "name": "ss_item_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 90858,
+                    "name": "ss_customer_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 225783,
+                    "name": "ss_cdemo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 7200,
+                    "name": "ss_hdemo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 49600,
+                    "name": "ss_addr_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 6,
+                    "name": "ss_store_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 300,
+                    "name": "ss_promo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 240000,
+                    "name": "ss_ticket_number",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 100,
+                    "name": "ss_quantity",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 9901,
+                    "name": "ss_wholesale_cost",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 19727,
+                    "name": "ss_list_price",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 18686,
+                    "name": "ss_sales_price",
+                    "type": {
+                        "base": "float",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 209365,
+                    "name": "ss_ext_discount_amt",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 411391,
+                    "name": "ss_ext_sales_price",
+                    "type": {
+                        "base": "float",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 380588,
+                    "name": "ss_ext_wholesale_cost",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 578761,
+                    "name": "ss_ext_list_price",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 78652,
+                    "name": "ss_ext_tax",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 209365,
+                    "name": "ss_coupon_amt",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 463256,
+                    "name": "ss_net_paid",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 618874,
+                    "name": "ss_net_paid_inc_tax",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 566151,
+                    "name": "ss_net_profit",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                }
+            ],
+            "indices": [
+                {
+                    "columns": [
+                        "ss_item_sk",
+                        "ss_ticket_number"
+                    ],
+                    "name": "pk_hash",
+                    "type": 0
+                }
+            ],
+            "num_rows": 2880404,
+            "pkey": [
+                "ss_item_sk",
+                "ss_ticket_number"
+            ]
+        },
+        "customer": {
+            "columns": [
+                {
+                    "distinct_values": 100000,
+                    "name": "c_customer_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 100000,
+                    "name": "c_customer_id",
+                    "type": {
+                        "base": "string",
+                        "nullable": false,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 94215,
+                    "name": "c_current_cdemo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 7200,
+                    "name": "c_current_hdemo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 43282,
+                    "name": "c_current_addr_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 3651,
+                    "name": "c_first_shipto_date_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 3651,
+                    "name": "c_first_sales_date_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 6,
+                    "name": "c_salutation",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 4131,
+                    "name": "c_first_name",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 4972,
+                    "name": "c_last_name",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 2,
+                    "name": "c_preferred_cust_flag",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            1
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 31,
+                    "name": "c_birth_day",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 12,
+                    "name": "c_birth_month",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 69,
+                    "name": "c_birth_year",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 211,
+                    "name": "c_birth_country",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            20
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 0,
+                    "name": "c_login",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 96477,
+                    "name": "c_email_address",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 366,
+                    "name": "c_last_review_date_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                }
+            ],
+            "indices": [
+                {
+                    "columns": [
+                        "c_customer_sk"
+                    ],
+                    "name": "pk_hash",
+                    "type": 0
+                }
+            ],
+            "num_rows": 100000,
+            "pkey": [
+                "c_customer_sk"
+            ]
+        },
+        "web_returns": {
+            "columns": [
+                {
+                    "distinct_values": 2113,
+                    "name": "wr_returned_date_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 44796,
+                    "name": "wr_returned_time_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 17029,
+                    "name": "wr_item_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 49450,
+                    "name": "wr_refunded_customer_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 67182,
+                    "name": "wr_refunded_cdemo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 7199,
+                    "name": "wr_refunded_hdemo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 37262,
+                    "name": "wr_refunded_addr_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 49544,
+                    "name": "wr_returning_customer_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 67206,
+                    "name": "wr_returning_cdemo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 7200,
+                    "name": "wr_returning_hdemo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 37237,
+                    "name": "wr_returning_addr_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 60,
+                    "name": "wr_web_page_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 35,
+                    "name": "wr_reason_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 42249,
+                    "name": "wr_order_number",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 100,
+                    "name": "wr_return_quantity",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 49198,
+                    "name": "wr_return_amt",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 18341,
+                    "name": "wr_return_tax",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 54753,
+                    "name": "wr_return_amt_inc_tax",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 9946,
+                    "name": "wr_fee",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 40723,
+                    "name": "wr_return_ship_cost",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 44381,
+                    "name": "wr_refunded_cash",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 34461,
+                    "name": "wr_reversed_charge",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 34198,
+                    "name": "wr_account_credit",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 51830,
+                    "name": "wr_net_loss",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                }
+            ],
+            "indices": [
+                {
+                    "columns": [
+                        "wr_item_sk",
+                        "wr_order_number"
+                    ],
+                    "name": "pk_hash",
+                    "type": 0
+                }
+            ],
+            "num_rows": 71763,
+            "pkey": [
+                "wr_item_sk",
+                "wr_order_number"
+            ]
+        },
+        "promotion": {
+            "columns": [
+                {
+                    "distinct_values": 300,
+                    "name": "p_promo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 300,
+                    "name": "p_promo_id",
+                    "type": {
+                        "base": "string",
+                        "nullable": false,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 255,
+                    "name": "p_start_date_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 249,
+                    "name": "p_end_date_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 291,
+                    "name": "p_item_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "p_cost",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            15,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "p_response_target",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 10,
+                    "name": "p_promo_name",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 2,
+                    "name": "p_channel_dmail",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            1
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "p_channel_email",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            1
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "p_channel_catalog",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            1
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "p_channel_tv",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            1
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "p_channel_radio",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            1
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "p_channel_press",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            1
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "p_channel_event",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            1
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "p_channel_demo",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            1
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 298,
+                    "name": "p_channel_details",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            100
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "p_purpose",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "p_discount_active",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            1
+                        ]
+                    }
+                }
+            ],
+            "indices": [
+                {
+                    "columns": [
+                        "p_promo_sk"
+                    ],
+                    "name": "pk_hash",
+                    "type": 0
+                }
+            ],
+            "num_rows": 300,
+            "pkey": [
+                "p_promo_sk"
+            ]
+        },
+        "catalog_sales": {
+            "columns": [
+                {
+                    "distinct_values": 1830,
+                    "name": "cs_sold_date_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 67461,
+                    "name": "cs_sold_time_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1922,
+                    "name": "cs_ship_date_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 79641,
+                    "name": "cs_bill_customer_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 153251,
+                    "name": "cs_bill_cdemo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 7200,
+                    "name": "cs_bill_hdemo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 47999,
+                    "name": "cs_bill_addr_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 79675,
+                    "name": "cs_ship_customer_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 153350,
+                    "name": "cs_ship_cdemo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 7200,
+                    "name": "cs_ship_hdemo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 47961,
+                    "name": "cs_ship_addr_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 6,
+                    "name": "cs_call_center_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 6588,
+                    "name": "cs_catalog_page_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 20,
+                    "name": "cs_ship_mode_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 5,
+                    "name": "cs_warehouse_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 18000,
+                    "name": "cs_item_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 300,
+                    "name": "cs_promo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 160000,
+                    "name": "cs_order_number",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 100,
+                    "name": "cs_quantity",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 9901,
+                    "name": "cs_wholesale_cost",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 29455,
+                    "name": "cs_list_price",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 26074,
+                    "name": "cs_sales_price",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 393013,
+                    "name": "cs_ext_discount_amt",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 393328,
+                    "name": "cs_ext_sales_price",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 341793,
+                    "name": "cs_ext_wholesale_cost",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 559009,
+                    "name": "cs_ext_list_price",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 84992,
+                    "name": "cs_ext_tax",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 157104,
+                    "name": "cs_coupon_amt",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 258578,
+                    "name": "cs_ext_ship_cost",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 423843,
+                    "name": "cs_net_paid",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 539634,
+                    "name": "cs_net_paid_inc_tax",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 544355,
+                    "name": "cs_net_paid_inc_ship",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 701006,
+                    "name": "cs_net_paid_inc_ship_tax",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 492185,
+                    "name": "cs_net_profit",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                }
+            ],
+            "indices": [
+                {
+                    "columns": [
+                        "cs_item_sk",
+                        "cs_order_number"
+                    ],
+                    "name": "pk_hash",
+                    "type": 0
+                }
+            ],
+            "num_rows": 1441548,
+            "pkey": [
+                "cs_item_sk",
+                "cs_order_number"
+            ]
+        },
+        "store_returns": {
+            "columns": [
+                {
+                    "distinct_values": 2003,
+                    "name": "sr_returned_date_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 32393,
+                    "name": "sr_return_time_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 17996,
+                    "name": "sr_item_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 86999,
+                    "name": "sr_customer_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 258383,
+                    "name": "sr_cdemo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 7200,
+                    "name": "sr_hdemo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 49799,
+                    "name": "sr_addr_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 6,
+                    "name": "sr_store_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 35,
+                    "name": "sr_reason_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 169672,
+                    "name": "sr_ticket_number",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 100,
+                    "name": "sr_return_quantity",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 113489,
+                    "name": "sr_return_amt",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 29230,
+                    "name": "sr_return_tax",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 141720,
+                    "name": "sr_return_amt_inc_tax",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 9951,
+                    "name": "sr_fee",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 82103,
+                    "name": "sr_return_ship_cost",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 101889,
+                    "name": "sr_refunded_cash",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 73365,
+                    "name": "sr_reversed_charge",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 72202,
+                    "name": "sr_store_credit",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 118454,
+                    "name": "sr_net_loss",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                }
+            ],
+            "indices": [
+                {
+                    "columns": [
+                        "sr_item_sk",
+                        "sr_ticket_number"
+                    ],
+                    "name": "pk_hash",
+                    "type": 0
+                }
+            ],
+            "num_rows": 287514,
+            "pkey": [
+                "sr_item_sk",
+                "sr_ticket_number"
+            ]
+        },
+        "item": {
+            "columns": [
+                {
+                    "distinct_values": 18000,
+                    "name": "i_item_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 9000,
+                    "name": "i_item_id",
+                    "type": {
+                        "base": "string",
+                        "nullable": false,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 4,
+                    "name": "i_rec_start_date",
+                    "type": {
+                        "base": "date",
+                        "nullable": true,
+                        "props": [
+                            "day"
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 3,
+                    "name": "i_rec_end_date",
+                    "type": {
+                        "base": "date",
+                        "nullable": true,
+                        "props": [
+                            "day"
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 13453,
+                    "name": "i_item_desc",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            200
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 2688,
+                    "name": "i_current_price",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 2040,
+                    "name": "i_wholesale_cost",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            7,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 948,
+                    "name": "i_brand_id",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 712,
+                    "name": "i_brand",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 16,
+                    "name": "i_class_id",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 99,
+                    "name": "i_class",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 10,
+                    "name": "i_category_id",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 10,
+                    "name": "i_category",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 994,
+                    "name": "i_manufact_id",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 989,
+                    "name": "i_manufact",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 6,
+                    "name": "i_size",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 13497,
+                    "name": "i_formulation",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 92,
+                    "name": "i_color",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 20,
+                    "name": "i_units",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "i_container",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 100,
+                    "name": "i_manager_id",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 17964,
+                    "name": "i_product_name",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                }
+            ],
+            "indices": [
+                {
+                    "columns": [
+                        "i_item_sk"
+                    ],
+                    "name": "pk_hash",
+                    "type": 0
+                }
+            ],
+            "num_rows": 18000,
+            "pkey": [
+                "i_item_sk"
+            ]
+        },
+        "web_page": {
+            "columns": [
+                {
+                    "distinct_values": 60,
+                    "name": "wp_web_page_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 30,
+                    "name": "wp_web_page_id",
+                    "type": {
+                        "base": "string",
+                        "nullable": false,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 4,
+                    "name": "wp_rec_start_date",
+                    "type": {
+                        "base": "date",
+                        "nullable": true,
+                        "props": [
+                            "day"
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 3,
+                    "name": "wp_rec_end_date",
+                    "type": {
+                        "base": "date",
+                        "nullable": true,
+                        "props": [
+                            "day"
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 9,
+                    "name": "wp_creation_date_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 40,
+                    "name": "wp_access_date_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 2,
+                    "name": "wp_autogen_flag",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            1
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 17,
+                    "name": "wp_customer_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "wp_url",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            100
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 7,
+                    "name": "wp_type",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 42,
+                    "name": "wp_char_count",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 21,
+                    "name": "wp_link_count",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 7,
+                    "name": "wp_image_count",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 5,
+                    "name": "wp_max_ad_count",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                }
+            ],
+            "indices": [
+                {
+                    "columns": [
+                        "wp_web_page_sk"
+                    ],
+                    "name": "pk_hash",
+                    "type": 0
+                }
+            ],
+            "num_rows": 60,
+            "pkey": [
+                "wp_web_page_sk"
+            ]
+        },
+        "reason": {
+            "columns": [
+                {
+                    "distinct_values": 35,
+                    "name": "r_reason_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 35,
+                    "name": "r_reason_id",
+                    "type": {
+                        "base": "string",
+                        "nullable": false,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 34,
+                    "name": "r_reason_desc",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                }
+            ],
+            "indices": [
+                {
+                    "columns": [
+                        "r_reason_sk"
+                    ],
+                    "name": "pk_hash",
+                    "type": 0
+                }
+            ],
+            "num_rows": 35,
+            "pkey": [
+                "r_reason_sk"
+            ]
+        },
+        "inventory": {
+            "columns": [
+                {
+                    "distinct_values": 261,
+                    "name": "inv_date_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 18000,
+                    "name": "inv_item_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 5,
+                    "name": "inv_warehouse_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1001,
+                    "name": "inv_quantity_on_hand",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                }
+            ],
+            "indices": [
+                {
+                    "columns": [
+                        "inv_date_sk",
+                        "inv_item_sk",
+                        "inv_warehouse_sk"
+                    ],
+                    "name": "pk_hash",
+                    "type": 0
+                }
+            ],
+            "num_rows": 11745000,
+            "pkey": [
+                "inv_date_sk",
+                "inv_item_sk",
+                "inv_warehouse_sk"
+            ]
+        },
+        "income_band": {
+            "columns": [
+                {
+                    "distinct_values": 20,
+                    "name": "ib_income_band_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 20,
+                    "name": "ib_lower_bound",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 20,
+                    "name": "ib_upper_bound",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                }
+            ],
+            "indices": [
+                {
+                    "columns": [
+                        "ib_income_band_sk"
+                    ],
+                    "name": "pk_hash",
+                    "type": 0
+                }
+            ],
+            "num_rows": 20,
+            "pkey": [
+                "ib_income_band_sk"
+            ]
+        },
+        "warehouse": {
+            "columns": [
+                {
+                    "distinct_values": 5,
+                    "name": "w_warehouse_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 5,
+                    "name": "w_warehouse_id",
+                    "type": {
+                        "base": "string",
+                        "nullable": false,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 4,
+                    "name": "w_warehouse_name",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            20
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 4,
+                    "name": "w_warehouse_sq_ft",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 4,
+                    "name": "w_street_number",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 4,
+                    "name": "w_street_name",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            60
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 4,
+                    "name": "w_street_type",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 4,
+                    "name": "w_suite_number",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "w_city",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            60
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "w_county",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            30
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "w_state",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "w_zip",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "w_country",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            20
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "w_gmt_offset",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            5,
+                            2
+                        ]
+                    }
+                }
+            ],
+            "indices": [
+                {
+                    "columns": [
+                        "w_warehouse_sk"
+                    ],
+                    "name": "pk_hash",
+                    "type": 0
+                }
+            ],
+            "num_rows": 5,
+            "pkey": [
+                "w_warehouse_sk"
+            ]
+        },
+        "store": {
+            "columns": [
+                {
+                    "distinct_values": 12,
+                    "name": "s_store_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 6,
+                    "name": "s_store_id",
+                    "type": {
+                        "base": "string",
+                        "nullable": false,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 4,
+                    "name": "s_rec_start_date",
+                    "type": {
+                        "base": "date",
+                        "nullable": true,
+                        "props": [
+                            "day"
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 3,
+                    "name": "s_rec_end_date",
+                    "type": {
+                        "base": "date",
+                        "nullable": true,
+                        "props": [
+                            "day"
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 3,
+                    "name": "s_closed_date_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 8,
+                    "name": "s_store_name",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            50
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 9,
+                    "name": "s_number_employees",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 10,
+                    "name": "s_floor_space",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 2,
+                    "name": "s_hours",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 7,
+                    "name": "s_manager",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            40
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 7,
+                    "name": "s_market_id",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "s_geography_class",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            100
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 10,
+                    "name": "s_market_desc",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            100
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 7,
+                    "name": "s_market_manager",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            40
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "s_division_id",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "s_division_name",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            50
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "s_company_id",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "s_company_name",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            50
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 9,
+                    "name": "s_street_number",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            10
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 12,
+                    "name": "s_street_name",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            60
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 8,
+                    "name": "s_street_type",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 11,
+                    "name": "s_suite_number",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 2,
+                    "name": "s_city",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            60
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "s_county",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            30
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "s_state",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 2,
+                    "name": "s_zip",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "s_country",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": [
+                            20
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 1,
+                    "name": "s_gmt_offset",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            5,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 5,
+                    "name": "s_tax_precentage",
+                    "type": {
+                        "base": "decimal",
+                        "nullable": true,
+                        "props": [
+                            5,
+                            2
+                        ]
+                    }
+                }
+            ],
+            "indices": [
+                {
+                    "columns": [
+                        "s_store_sk"
+                    ],
+                    "name": "pk_hash",
+                    "type": 0
+                }
+            ],
+            "num_rows": 12,
+            "pkey": [
+                "s_store_sk"
+            ]
+        },
+        "customer_demographics": {
+            "columns": [
+                {
+                    "distinct_values": 1920800,
+                    "name": "cd_demo_sk",
+                    "type": {
+                        "base": "int",
+                        "nullable": false,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 2,
+                    "name": "cd_gender",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            1
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 5,
+                    "name": "cd_marital_status",
+                    "type": {
+                        "base": "char",
+                        "nullable": true,
+                        "props": [
+                            1
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 7,
+                    "name": "cd_education_status",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 20,
+                    "name": "cd_purchase_estimate",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 4,
+                    "name": "cd_credit_rating",
+                    "type": {
+                        "base": "string",
+                        "nullable": true,
+                        "props": []
+                    }
+                },
+                {
+                    "distinct_values": 7,
+                    "name": "cd_dep_count",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 7,
+                    "name": "cd_dep_employed_count",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                },
+                {
+                    "distinct_values": 7,
+                    "name": "cd_dep_college_count",
+                    "type": {
+                        "base": "int",
+                        "nullable": true,
+                        "props": [
+                            32
+                        ]
+                    }
+                }
+            ],
+            "indices": [
+                {
+                    "columns": [
+                        "cd_demo_sk"
+                    ],
+                    "name": "pk_hash",
+                    "type": 0
+                }
+            ],
+            "num_rows": 1920800,
+            "pkey": [
+                "cd_demo_sk"
+            ]
+        }
+    }
+}

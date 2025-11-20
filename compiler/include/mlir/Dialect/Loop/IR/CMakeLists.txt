@@ -1,0 +1,17 @@
+
+set(LLVM_TARGET_DEFINITIONS LoopOps.td)
+mlir_tablegen(LoopOpsDialect.h.inc -gen-dialect-decls)
+mlir_tablegen(LoopOpsDialect.cpp.inc -gen-dialect-defs)
+mlir_tablegen(LoopOps.h.inc -gen-op-decls)
+mlir_tablegen(LoopOps.cpp.inc -gen-op-defs)
+mlir_tablegen(LoopOpsEnums.h.inc -gen-enum-decls)
+mlir_tablegen(LoopOpsEnums.cpp.inc -gen-enum-defs)
+mlir_tablegen(LoopOpsTypes.h.inc --gen-typedef-decls)
+mlir_tablegen(LoopOpsTypes.cpp.inc --gen-typedef-defs)
+
+set(LLVM_TARGET_DEFINITIONS LoopInterfaces.td)
+mlir_tablegen(LoopOpsInterfaces.h.inc -gen-op-interface-decls)
+mlir_tablegen(LoopOpsInterfaces.cpp.inc -gen-op-interface-defs)
+add_public_tablegen_target(MLIRLoopOpsIncGen)
+# add_mlir_doc(LoopOps LoopDialect Loop/ -gen-dialect-doc)
+# add_mlir_doc(DBInterfaces DBInterfaces DB/ -gen-op-interface-docs)

@@ -1,0 +1,11 @@
+.vscode/
+__pycache__
+
+build/
+
+resources/data/arrow/
+resources/data/csv/ssb_*
+resources/data/csv/tpch_*
+resources/data/csv/tpcds_*
+
+grpc_flight_install/

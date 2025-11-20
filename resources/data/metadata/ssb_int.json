@@ -1,0 +1,596 @@
+{
+  "tables": {
+    "customer": {
+      "columns": [
+        {
+          "name": "c_custkey",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "c_name",
+          "type": {
+            "base": "string",
+            "nullable": true,
+            "props": [
+              25
+            ]
+          }
+        },
+        {
+          "name": "c_address",
+          "type": {
+            "base": "string",
+            "nullable": true,
+            "props": [
+              25
+            ]
+          }
+        },
+        {
+          "name": "c_city",
+          "type": {
+            "base": "string",
+            "nullable": true,
+            "props": []
+          }
+        },
+        {
+          "name": "c_nation",
+          "type": {
+            "base": "string",
+            "nullable": true,
+            "props": []
+          }
+        },
+        {
+          "name": "c_region",
+          "type": {
+            "base": "string",
+            "nullable": true,
+            "props": []
+          }
+        },
+        {
+          "name": "c_phone",
+          "type": {
+            "base": "string",
+            "nullable": true,
+            "props": []
+          }
+        },
+        {
+          "name": "c_mktsegment",
+          "type": {
+            "base": "string",
+            "nullable": true,
+            "props": []
+          }
+        }
+      ],
+      "num_batches": 1,
+      "num_rows": 30000,
+      "pkey": [
+        "c_custkey"
+      ]
+    },
+    "date": {
+      "columns": [
+        {
+          "name": "d_datekey",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "d_date",
+          "type": {
+            "base": "string",
+            "nullable": true,
+            "props": []
+          }
+        },
+        {
+          "name": "d_dayofweek",
+          "type": {
+            "base": "string",
+            "nullable": true,
+            "props": []
+          }
+        },
+        {
+          "name": "d_month",
+          "type": {
+            "base": "string",
+            "nullable": true,
+            "props": []
+          }
+        },
+        {
+          "name": "d_year",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "d_yearmonthnum",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "d_yearmonth",
+          "type": {
+            "base": "char",
+            "nullable": true,
+            "props": [
+              7
+            ]
+          }
+        },
+        {
+          "name": "d_daynuminweek",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "d_daynuminmonth",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "d_daynuminyear",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "d_monthnuminyear",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "d_weeknuminyear",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "d_sellingseason",
+          "type": {
+            "base": "string",
+            "nullable": true,
+            "props": [
+              12
+            ]
+          }
+        },
+        {
+          "name": "d_lastdayinweekfl",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "d_lastdayinmonthfl",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "d_holidayfl",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "d_weekdayfl",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        }
+      ],
+      "num_batches": 1,
+      "num_rows": 2556,
+      "pkey": [
+        "d_datekey"
+      ]
+    },
+    "lineorder": {
+      "columns": [
+        {
+          "name": "lo_orderkey",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "lo_linenumber",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "lo_custkey",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "lo_partkey",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "lo_suppkey",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "lo_orderdate",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "lo_orderpriority",
+          "type": {
+            "base": "string",
+            "nullable": true,
+            "props": []
+          }
+        },
+        {
+          "name": "lo_shippriority",
+          "type": {
+            "base": "char",
+            "nullable": true,
+            "props": [
+              1
+            ]
+          }
+        },
+        {
+          "name": "lo_quantity",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "lo_extendedprice",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "lo_ordtotalprice",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "lo_discount",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "lo_revenue",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "lo_supplycost",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "lo_tax",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "lo_commitdate",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "lo_shipmode",
+          "type": {
+            "base": "string",
+            "nullable": true,
+            "props": []
+          }
+        }
+      ],
+      "num_batches": 1,
+      "num_rows": 6001171,
+      "pkey": [
+        "lo_orderkey",
+        "lo_linenumber"
+      ]
+    },
+    "part": {
+      "columns": [
+        {
+          "name": "p_partkey",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "p_name",
+          "type": {
+            "base": "string",
+            "nullable": true,
+            "props": [
+              22
+            ]
+          }
+        },
+        {
+          "name": "p_mfgr",
+          "type": {
+            "base": "char",
+            "nullable": true,
+            "props": [
+              6
+            ]
+          }
+        },
+        {
+          "name": "p_category",
+          "type": {
+            "base": "char",
+            "nullable": true,
+            "props": [
+              7
+            ]
+          }
+        },
+        {
+          "name": "p_brand1",
+          "type": {
+            "base": "string",
+            "nullable": true,
+            "props": []
+          }
+        },
+        {
+          "name": "p_color",
+          "type": {
+            "base": "string",
+            "nullable": true,
+            "props": [
+              11
+            ]
+          }
+        },
+        {
+          "name": "p_type",
+          "type": {
+            "base": "string",
+            "nullable": true,
+            "props": [
+              25
+            ]
+          }
+        },
+        {
+          "name": "p_size",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "p_container",
+          "type": {
+            "base": "string",
+            "nullable": true,
+            "props": []
+          }
+        }
+      ],
+      "num_batches": 1,
+      "num_rows": 200000,
+      "pkey": [
+        "p_partkey"
+      ]
+    },
+    "supplier": {
+      "columns": [
+        {
+          "name": "s_suppkey",
+          "type": {
+            "base": "int",
+            "nullable": true,
+            "props": [
+              32
+            ]
+          }
+        },
+        {
+          "name": "s_name",
+          "type": {
+            "base": "string",
+            "nullable": true,
+            "props": []
+          }
+        },
+        {
+          "name": "s_address",
+          "type": {
+            "base": "string",
+            "nullable": true,
+            "props": [
+              25
+            ]
+          }
+        },
+        {
+          "name": "s_city",
+          "type": {
+            "base": "string",
+            "nullable": true,
+            "props": []
+          }
+        },
+        {
+          "name": "s_nation",
+          "type": {
+            "base": "string",
+            "nullable": true,
+            "props": []
+          }
+        },
+        {
+          "name": "s_region",
+          "type": {
+            "base": "string",
+            "nullable": true,
+            "props": []
+          }
+        },
+        {
+          "name": "s_phone",
+          "type": {
+            "base": "string",
+            "nullable": true,
+            "props": []
+          }
+        }
+      ],
+      "num_batches": 1,
+      "num_rows": 2000,
+      "pkey": [
+        "s_suppkey"
+      ]
+    }
+  }
+}
