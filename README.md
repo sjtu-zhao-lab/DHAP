@@ -158,3 +158,6 @@ bash run.sh \
 --sql_file /workspace/dhap/resources/sql/tpch/${qid}.sql \
 --data_dir /workspace/dhap/resources/data/arrow/tpch_1/; \
 ```
+
+# Acknowledge
+The query compiler of DHAP is built on [LingoDB](https://github.com/lingo-db/lingo-db). We thank the authors of LingoDB for their work.
